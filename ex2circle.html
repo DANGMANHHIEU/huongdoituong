@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>circle</title>
+</head>
+<body>
+<script>
+    let circle = function (radius) {
+        this.radius = radius;
+        this.getRadius= function (){
+            return this.radius;
+        }
+        this.getArea = function (){
+            return 3.14 * radius * radius;
+        }
+    }
+    let Circle = new circle(parseInt(prompt('nhap so')));
+    let radius = Circle.getRadius();
+    let area = Circle.getArea();
+    document.write('ban kinh:'+radius+ '<br>'+'dien tich'+area);
+</script>
+
+</body>
+</html>
