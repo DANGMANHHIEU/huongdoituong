@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<canvas id="demo" width="500" height="600"></canvas>
+<script>
+  let rectangle = function (width,height){
+      this.width =width;
+      this.height = height;
+      this.getWidth = function (){
+          return this.width;
+      }
+      this.getHeight = function (){
+          return this.height;
+      }
+      this.setWidth = function (width){
+          this.width = width;
+      }
+      this.setHeight = function (height){
+          this.height = height;
+      }
+      this.area = function (){
+          return this.width * this.height ;
+      }
+      this.perimeter = function (){
+          return (this.width + this.height) * 2;
+      }
+  }
+  let Rectangle = new rectangle(10,5);
+   // Rectangle.setWidth(parseInt(prompt('dai')));
+   // Rectangle.setHeight(parseInt(prompt('rong')));g
+   let Area = Rectangle.area();
+   let Perimeter = Rectangle.perimeter();
+  document.write(`dien tich ${Area}<br>chu vi${Perimeter}`);
+  let canvas = document.getElementById('demo');
+  let ctx = canvas.getContext('2d');
+  ctx.fillStyle='#fa4b2a';
+  ctx.fillRect(10,10,width,heigh);
+
+</script>
+</body>
+</html>
