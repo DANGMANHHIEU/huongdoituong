@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    let temperature = function (celsius) {
+        this.celsius = celsius;
+        this.fahrenheit = function () {
+            return 9 / 5 * this.celsius + 32;
+        }
+        this.kenvins = function () {
+            return this.celsius + 273.15
+        }
+    }
+    let Temperature = new temperature(25);
+    let Fahrenheit = Temperature.fahrenheit();
+    let Kenvins = Temperature.kenvins();
+    document.write(`độ F:${Fahrenheit}<br> độ K:${Kenvins}`);
+
+</script>
+
+</body>
+</html>
